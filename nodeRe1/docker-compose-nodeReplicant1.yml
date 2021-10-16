@@ -1,0 +1,37 @@
+version: '3'
+services:
+    node2:
+        image: cassandra:latest
+        # external via guest wifi
+        # image: datastax/dse-server:6.0.8
+        container_name: replicantNode1
+        hostname: node2
+        networks:
+            dc1ring:
+                ipv4_address: 172.30.0.3
+        volumes:
+            - ./musicdb:/opt/dse/musicdb
+        environment:
+            # - DS_LICENSE=accept
+            - SEEDS=172.30.0.2
+            # - START_RPC=false
+            # - CLUSTER_NAME=dse51_cluster
+            - CASSANDRA_BROADCAST_ADDRESS=172.30.0.3
+            - CASSANDRA_SEEDS=172.30.0.2,172.30.0.4
+            # - NUM_TOKENS=3
+            # - DC=DC1
+            # - RACK=RAC1
+#            - MAX_HEAP_SIZE=1000000000
+#            - HEAP_NEWSIZE= "4G"
+        expose:
+            - 7000
+            - 7001
+            - 7199
+            - 9042
+            - 9142
+        ports:
+            - 9043:9042
+networks:
+  dc1ring:
+    external: true
+        # restart: always
