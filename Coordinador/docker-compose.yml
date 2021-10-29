@@ -16,7 +16,7 @@ services:
         # Maps cassandra exercises to a local folder.
         # This preserves data across container restarts.
         volumes:
-            - ./musicdb:/opt/dse/musicdb
+            - ./postulaciones/postulaciones2.csv:/postulaciones2.csv
         # Docker container environment variable. We are using the
         # CASSANDRA_CLUSTER_NAME to name the cluster. This needs to be the same
         # across clusters. We are also declaring that node1 is a seed node etc.
