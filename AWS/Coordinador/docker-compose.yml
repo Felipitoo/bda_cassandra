@@ -27,7 +27,7 @@ services:
             # - SEEDS=node1
             # - START_RPC=false
             # - CLUSTER_NAME=dse51_cluster
-            - CASSANDRA_BROADCAST_ADDRESS=54.234.79.133
+            - CASSANDRA_BROADCAST_ADDRESS=18.212.209.211
             # - NUM_TOKENS=3
             # - DC=DC1
             # - RACK=RAC1

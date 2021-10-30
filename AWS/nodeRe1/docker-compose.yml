@@ -14,11 +14,11 @@ services:
         #     - ./musicdb:/opt/dse/musicdb
         environment:
             # - DS_LICENSE=accept
-            - SEEDS=54.234.79.133
+            - SEEDS=18.212.209.211
             # - START_RPC=false
             # - CLUSTER_NAME=dse51_cluster
-            - CASSANDRA_BROADCAST_ADDRESS=18.215.172.23
-            - CASSANDRA_SEEDS=54.234.79.133,54.221.182.156
+            - CASSANDRA_BROADCAST_ADDRESS=54.160.62.205
+            - CASSANDRA_SEEDS=18.212.209.211,54.196.240.55
             # - NUM_TOKENS=3
             # - DC=DC1
             # - RACK=RAC1
