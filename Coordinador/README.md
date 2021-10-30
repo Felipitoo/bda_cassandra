@@ -11,9 +11,9 @@ use postulaciones;
 
 crear tablas (redundancia permitida por paradigma de Cassandra segun PPT 38 presentacion 2 de cassandra)
 
-CREATE TABLE postulacion_por_facultad (cedula text, periodo text, sexo text, preferencia int, carrera text, matriculado text, facultad text, puntaje int, grupo_depen text, region text, latitud float, longitud float, ptje_nem int, psu_prom int, pace text, gratuidad text, PRIMARY KEY(facultad, periodo, cedula));
+CREATE TABLE postulacion_por_facultad (cedula text, periodo text, sexo text, preferencia int, carrera text, matriculado text, facultad text, puntaje int, grupo_depen text, region text, latitud float, longitud float, ptje_nem int, psu_prom int, pace text, gratuidad text, PRIMARY KEY(facultad, psu_prom, cedula));
 
-CREATE TABLE postulacion_por_carrera (cedula text, periodo text, sexo text, preferencia int, carrera text, matriculado text, facultad text, puntaje int, grupo_depen text, region text, latitud float, longitud float, ptje_nem int, psu_prom int, pace text, gratuidad text, PRIMARY KEY(carrera, periodo ,psu_prom ,cedula));
+CREATE TABLE postulacion_por_carrera (cedula text, periodo text, sexo text, preferencia int, carrera text, matriculado text, facultad text, puntaje int, grupo_depen text, region text, latitud float, longitud float, ptje_nem int, psu_prom int, pace text, gratuidad text, PRIMARY KEY(carrera, periodo ,cedula));
 
 CREATE TABLE postulacion_por_region_carrera (cedula text, periodo text, sexo text, preferencia int, carrera text, matriculado text, facultad text, puntaje int, grupo_depen text, region text, latitud float, longitud float, ptje_nem int, psu_prom int, pace text, gratuidad text, PRIMARY KEY((region,carrera), periodo, cedula));
 
