@@ -15,11 +15,15 @@ CREATE TABLE postulacion_por_facultad (cedula text, periodo text, sexo text, pre
 
 CREATE TABLE postulacion_por_carrera (cedula text, periodo text, sexo text, preferencia int, carrera text, matriculado text, facultad text, puntaje int, grupo_depen text, region text, latitud float, longitud float, ptje_nem int, psu_prom int, pace text, gratuidad text, PRIMARY KEY(carrera, psu_prom, cedula));
 
+CREATE TABLE postulacion_por_region_carrera (cedula text, periodo text, sexo text, preferencia int, carrera text, matriculado text, facultad text, puntaje int, grupo_depen text, region text, latitud float, longitud float, ptje_nem int, psu_prom int, pace text, gratuidad text, PRIMARY KEY((region,carrera), periodo, cedula));
+
 Copiar datos en las tablas
 
 COPY postulacion_por_facultad (cedula , periodo , sexo , preferencia , carrera , matriculado , facultad , puntaje , grupo_depen , region , latitud , longitud , ptje_nem , psu_prom , pace , gratuidad ) FROM 'postulaciones2.csv' WITH DELIMITER=';' AND HEADER=TRUE;
 
 COPY postulacion_por_carrera (cedula , periodo , sexo , preferencia , carrera , matriculado , facultad , puntaje , grupo_depen , region , latitud , longitud , ptje_nem , psu_prom , pace , gratuidad ) FROM 'postulaciones2.csv' WITH DELIMITER=';' AND HEADER=TRUE;
+
+COPY postulacion_por_region_carrera (cedula , periodo , sexo , preferencia , carrera , matriculado , facultad , puntaje , grupo_depen , region , latitud , longitud , ptje_nem , psu_prom , pace , gratuidad ) FROM 'postulaciones2.csv' WITH DELIMITER=';' AND HEADER=TRUE;
 
 Para conectar a excel
 
