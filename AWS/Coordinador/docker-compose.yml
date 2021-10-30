@@ -5,6 +5,7 @@ services:
         # Datastax image for Cassandra version 3.x is pulled
         # from the docker within ING of public store.
         image: cassandra:latest
+        network_mode: "host"
         # external via guest wifi
         # image: datastax/dse-server:6.0.8
         container_name: coordinatorNode
