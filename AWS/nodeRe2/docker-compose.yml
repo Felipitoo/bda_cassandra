@@ -17,8 +17,8 @@ services:
             - SEEDS=18.212.209.211
             # - START_RPC=false
             # - CLUSTER_NAME=dse51_cluster
-            - CASSANDRA_BROADCAST_ADDRESS=54.196.240.55
-            - CASSANDRA_SEEDS=18.212.209.211,54.160.62.205
+            - CASSANDRA_BROADCAST_ADDRESS=52.90.169.207
+            - CASSANDRA_SEEDS=3.86.86.157,52.207.235.41
             # - NUM_TOKENS=3
             # - DC=DC1
             # - RACK=RAC1
