@@ -9,4 +9,4 @@ services:
         volumes:
             - ./postulaciones/postulaciones2.csv:/postulaciones2.csv
         environment:
-            - CASSANDRA_BROADCAST_ADDRESS=23.22.233.60
+            - CASSANDRA_BROADCAST_ADDRESS=18.208.245.189
