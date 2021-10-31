@@ -24,14 +24,14 @@ services:
             # - RACK=RAC1
             # - MAX_HEAP_SIZE=1000000000
             # - HEAP_NEWSIZE= "4G"
-        expose:
-            - 7000
-            - 7001
-            - 7199
-            - 9042
-            - 9142
-        ports:
-            - 9044:9042
+        # expose:
+        #     - 7000
+        #     - 7001
+        #     - 7199
+        #     - 9042
+        #     - 9142
+        # ports:
+        #     - 9044:9042
 # networks:
 #   dc1ring:
 #     external: true
