@@ -7,5 +7,5 @@ services:
         hostname: node2
         environment:
             - SEEDS=3.89.104.249
-            - CASSANDRA_BROADCAST_ADDRESS=54.160.221.208
-            - CASSANDRA_SEEDS=3.89.104.249,107.22.138.69
+            - CASSANDRA_BROADCAST_ADDRESS=52.54.112.197
+            - CASSANDRA_SEEDS=3.89.104.249,54.160.221.208
