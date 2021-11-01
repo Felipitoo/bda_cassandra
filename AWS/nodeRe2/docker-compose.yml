@@ -6,7 +6,7 @@ services:
         container_name: replicantNode2
         hostname: node3
         environment:
-            - SEEDS=34.224.222.161
-            - CASSANDRA_BROADCAST_ADDRESS=107.22.138.69
-            - CASSANDRA_SEEDS=34.224.222.161,54.208.183.139
+            - SEEDS=3.89.104.249
+            - CASSANDRA_BROADCAST_ADDRESS=54.160.221.208
+            - CASSANDRA_SEEDS=3.89.104.249,52.54.112.197
 
